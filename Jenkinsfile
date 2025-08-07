@@ -1,5 +1,9 @@
 pipeline {
     agent any
+   
+    tools {
+        nodejs "Node 18"
+    }
 
     environment {
         NODE_ENV = 'production'
@@ -8,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'master', url: 'https://github.com/DileepTeeparthi/node-sample--project.git'
             }
         }
 
